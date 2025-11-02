@@ -1,1 +1,221 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>[Your Name] — Portfolio</title>
+  <meta name="description" content="Portfolio — 2nd Year Engineering Student | Electronics & Drone Enthusiast | NCC Cadet" />
+
+  <!-- Simple, modern styling (no external libs) -->
+  <style>
+    :root{
+      --bg:#f7fafc;
+      --card:#ffffff;
+      --accent:#0b3b66; /* navy */
+      --muted:#6b7280;
+      --accent-2:#1f6feb;
+      --radius:12px;
+      --maxw:960px;
+      --gap:18px;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      background:linear-gradient(180deg, #f6fbff 0%, var(--bg) 100%);
+      color:#0f172a;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.45;
+      padding:36px 16px;
+      display:flex;
+      justify-content:center;
+    }
+    .site{
+      width:100%;
+      max-width:var(--maxw);
+    }
+    header{
+      display:flex;
+      align-items:center;
+      gap:16px;
+      margin-bottom:18px;
+    }
+    .avatar{
+      width:86px; height:86px; border-radius:14px;
+      background:linear-gradient(135deg,#e6f0ff,#f7f9fb);
+      display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--accent);
+      font-size:28px; flex:0 0 86px; box-shadow:0 6px 18px rgba(11,59,102,0.08);
+    }
+    h1{margin:0;font-size:20px}
+    p.lead{margin:4px 0 0;color:var(--muted);font-size:14px}
+
+    .grid{
+      display:grid;
+      grid-template-columns:1fr 320px;
+      gap:var(--gap);
+    }
+    @media (max-width:900px){ .grid{grid-template-columns:1fr} .sidebar{order:2} }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      padding:18px;
+      box-shadow:0 6px 20px rgba(12,34,56,0.06);
+    }
+
+    /* content */
+    .section + .section{margin-top:14px}
+    .section h2{margin:0 0 10px 0;font-size:16px;color:var(--accent)}
+    .intro{
+      display:flex;flex-direction:column;gap:10px;
+    }
+    .tagline{font-weight:600;color:var(--accent-2);font-size:15px}
+    .skills-list{display:flex;flex-wrap:wrap;gap:8px}
+    .skill{background:#f1f7ff;padding:8px 10px;border-radius:999px;font-size:13px;color:var(--accent)}
+    .edu-item, .project-item{margin-bottom:10px}
+    .muted{color:var(--muted);font-size:13px}
+
+    .contact-list{display:flex;flex-direction:column;gap:8px}
+    a.link{color:var(--accent-2); text-decoration:none; font-weight:600}
+
+    footer{margin-top:18px;text-align:center;color:var(--muted);font-size:13px}
+
+    /* small top-nav */
+    nav{display:flex;gap:10px;align-items:center;margin-left:auto}
+    nav a{font-size:13px;color:var(--muted);text-decoration:none;padding:8px;border-radius:8px}
+    nav a:hover{background:#f1f5f9;color:var(--accent)}
+
+    /* nice button */
+    .btn{
+      display:inline-block;padding:9px 14px;border-radius:10px;font-weight:600;background:var(--accent-2);color:white;text-decoration:none;
+      box-shadow:0 6px 18px rgba(31,111,235,0.12);
+    }
+  </style>
+</head>
+<body>
+  <div class="site">
+
+    <!-- Header -->
+    <header>
+      <div class="avatar" aria-hidden="true">YN</div>
+      <div>
+        <h1>[Your Name]</h1>
+        <p class="lead">2nd Year B.E. — Electronics Enthusiast • NCC Cadet • Drone & IoT Learner</p>
+      </div>
+
+      <!-- simple nav -->
+      <nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <div class="grid">
+
+      <!-- Main Column -->
+      <main>
+        <!-- Intro Card -->
+        <section class="card intro section" id="intro">
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <div>
+              <div class="tagline">Aspiring Electronics Engineer & NCC Cadet</div>
+              <h2 style="margin-top:6px">Hello — welcome to my portfolio</h2>
+              <p class="muted">I build practical projects, learn new tools, and prepare for placements. I am focused on hands-on electronics, basic firmware, and drone concepts.</p>
+            </div>
+            <div style="text-align:right">
+              <a class="btn" href="#contact">Contact Me</a>
+            </div>
+          </div>
+        </section>
+
+        <!-- About -->
+        <section class="card section" id="about">
+          <h2>About Me</h2>
+          <p class="muted">I am a dedicated 2nd-year Engineering student with a passion for electronics, drones, and technology-driven projects. My NCC training has helped me develop discipline, teamwork, and leadership. I am actively improving my communication and practical skills to prepare for professional roles in the tech field.</p>
+        </section>
+
+        <!-- Skills -->
+        <section class="card section" id="skills">
+          <h2>Skills</h2>
+
+          <div style="margin-bottom:10px"><strong>Technical</strong></div>
+          <div class="skills-list" aria-hidden="true">
+            <div class="skill">Basic Electronics</div>
+            <div class="skill">Circuit Analysis</div>
+            <div class="skill">MS Office / Excel</div>
+            <div class="skill">PCB & Prototyping (learning)</div>
+            <div class="skill">Beginner Programming</div>
+          </div>
+
+          <div style="margin-top:12px"><strong>Soft Skills</strong></div>
+          <div style="margin-top:8px" class="muted">Teamwork & Leadership • Discipline • Adaptability • Eagerness to learn</div>
+        </section>
+
+        <!-- Education -->
+        <section class="card section" id="education">
+          <h2>Education</h2>
+          <div class="edu-item">
+            <strong>Bachelor of Engineering (B.E.) — [Department]</strong>
+            <div class="muted">[College Name] — 2nd Year • Expected graduation: [YYYY]</div>
+          </div>
+
+          <div class="edu-item">
+            <strong>Academic Focus</strong>
+            <div class="muted">Electronics, Circuit Theory, Embedded Basics, Engineering Mathematics</div>
+          </div>
+        </section>
+
+      </main>
+
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <div class="card section">
+          <h2>Contact</h2>
+          <div class="contact-list">
+            <div><strong>Email:</strong> <a class="link" href="mailto:your.email@example.com">your.email@example.com</a></div>
+            <div><strong>LinkedIn:</strong> <a class="link" href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener">linkedin.com/in/yourprofile</a></div>
+            <div><strong>GitHub:</strong> <a class="link" href="https://github.com/yourusername" target="_blank" rel="noopener">github.com/yourusername</a></div>
+            <div><strong>Location:</strong> <span class="muted">[City, State]</span></div>
+          </div>
+        </div>
+
+        <div class="card section" style="margin-top:var(--gap)">
+          <h2>Quick Facts</h2>
+          <div class="muted" style="font-size:14px;line-height:1.6">
+            • 2nd Year B.E. student<br>
+            • NCC cadet — team & leadership experience<br>
+            • Interested in drones, electronics & IoT<br>
+            • Improving communication & practical skills
+          </div>
+        </div>
+
+        <div class="card section" style="margin-top:var(--gap)">
+          <h2>Download</h2>
+          <p class="muted">Resume (PDF)</p>
+          <a class="btn" href="#" id="download-resume">Download Resume</a>
+        </div>
+      </aside>
+
+    </div>
+
+    <footer>
+      Built by [Your Name] • 2nd Year Engineering Student • © <span id="yr"></span>
+    </footer>
+  </div>
+
+  <script>
+    // small script: update year and attach download action (replace resume URL)
+    document.getElementById('yr').textContent = new Date().getFullYear();
+    document.getElementById('download-resume').addEventListener('click', function(e){
+      e.preventDefault();
+      // Replace the URL below with your uploaded resume file path in the repo (e.g., /resume.pdf)
+      const resumeUrl = '/resume.pdf';
+      window.open(resumeUrl, '_blank');
+    });
+  </script>
+</body>
+</html>
 
